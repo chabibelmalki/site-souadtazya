@@ -81,7 +81,7 @@ export async function POST(request: Request) {
         )
         .join("")}
     </table>
-    <p style="color:#64748b;font-size:13px;margin-top:16px">Envoyé depuis ${site.url}</p>
+    <p style="color:#64748b;font-size:13px;margin-top:16px">Demande envoyée depuis le site ${site.name}.</p>
   </div>`;
 
   const apiKey = process.env.RESEND_API_KEY;
@@ -93,11 +93,17 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: true, delivered: false });
   }
 
+  // Expéditeur : RESEND_FROM peut être une simple adresse (ex.
+  // "leads@mon-domaine.fr") → le nom de l'entreprise est ajouté
+  // automatiquement, ou un "Nom <adresse>" complet.
+  const fromEnv = process.env.RESEND_FROM ?? "onboarding@resend.dev";
+  const from = fromEnv.includes("<") ? fromEnv : `${site.name} <${fromEnv}>`;
+
   try {
     const { Resend } = await import("resend");
     const resend = new Resend(apiKey);
     const { error } = await resend.emails.send({
-      from: process.env.RESEND_FROM ?? "SANAD CLEAN <onboarding@resend.dev>",
+      from,
       to: process.env.LEAD_TO ?? site.email,
       replyTo: data.email || undefined,
       subject,
