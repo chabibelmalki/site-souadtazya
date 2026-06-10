@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="200" viewBox="0 0 860 200">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d9488"/>
+      <stop offset="1" stop-color="#115e59"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Icône (mark) -->
+  <g transform="translate(20,20) scale(0.3125)">
+    <rect width="512" height="512" rx="112" fill="url(#g)"/>
+    <path fill="#ffffff" d="M256 120c10 60 36 86 96 96-60 10-86 36-96 96-10-60-36-86-96-96 60-10 86-36 96-96z"/>
+    <path fill="#5eead4" d="M372 300c5 30 18 43 48 48-30 5-43 18-48 48-5-30-18-43-48-48 30-5 43-18 48-48z"/>
+  </g>
+
+  <!-- Texte -->
+  <text x="208" y="116" font-family="Poppins, 'Noto Sans', 'DejaVu Sans', sans-serif" font-weight="800" font-size="72" letter-spacing="-2">
+    <tspan fill="#0f172a">SANAD</tspan><tspan fill="#14b8a6"> CLEAN</tspan>
+  </text>
+  <text x="212" y="158" font-family="'Noto Sans', 'DejaVu Sans', sans-serif" font-weight="600" font-size="22" letter-spacing="7" fill="#64748b">NETTOYAGE · NÎMES</text>
+</svg>
