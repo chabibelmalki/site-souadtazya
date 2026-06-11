@@ -46,7 +46,7 @@ export function Header() {
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  "rounded-full px-4 py-2 text-sm font-medium transition-colors",
+                  "whitespace-nowrap rounded-full px-4 py-2 text-sm font-medium transition-colors",
                   active
                     ? "bg-brand-50 text-brand-700"
                     : "text-slate-600 hover:bg-slate-50 hover:text-ink"

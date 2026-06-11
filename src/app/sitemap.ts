@@ -4,6 +4,7 @@ import { site } from "@/lib/site";
 const routes = [
   { path: "/", priority: 1, freq: "weekly" as const },
   { path: "/services", priority: 0.9, freq: "monthly" as const },
+  { path: "/realisations", priority: 0.7, freq: "monthly" as const },
   { path: "/tarifs", priority: 0.9, freq: "monthly" as const },
   { path: "/credit-impot", priority: 0.9, freq: "monthly" as const },
   { path: "/rendez-vous", priority: 0.8, freq: "monthly" as const },

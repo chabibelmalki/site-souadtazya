@@ -55,9 +55,8 @@ export const faq: FaqItem[] = [
 
 export const mainNav = [
   { href: "/services", label: "Services" },
+  { href: "/realisations", label: "Réalisations" },
   { href: "/tarifs", label: "Tarifs" },
   { href: "/credit-impot", label: "Crédit d'impôt" },
-  { href: "/zone-intervention", label: "Zone d'intervention" },
-  { href: "/faq", label: "FAQ" },
   { href: "/contact", label: "Contact" },
 ];

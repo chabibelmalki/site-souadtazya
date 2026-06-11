@@ -52,6 +52,7 @@ export function Footer() {
             <ul className="mt-4 space-y-3 text-sm">
               {[
                 { href: "/a-propos", label: "À propos" },
+                { href: "/realisations", label: "Réalisations" },
                 { href: "/tarifs", label: "Tarifs" },
                 { href: "/credit-impot", label: "Crédit d'impôt" },
                 { href: "/rendez-vous", label: "Prendre rendez-vous" },

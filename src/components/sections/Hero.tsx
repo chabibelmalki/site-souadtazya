@@ -42,10 +42,9 @@ export function Hero() {
 
           <Reveal delay={0.1}>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-slate-600">
-              Ménage à domicile (avec <strong>crédit d&apos;impôt de 50 %</strong>),
-              nettoyage de locaux professionnels, remise en état et traitement
-              des nuisibles. SANAD CLEAN s&apos;occupe de tout, vous profitez du
-              reste.
+              Ménage à domicile avec <strong>crédit d&apos;impôt de 50 %</strong>,
+              nettoyage de locaux, remise en état et traitement des nuisibles à
+              Nîmes. On s&apos;occupe de tout.
             </p>
           </Reveal>
 

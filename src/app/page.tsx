@@ -12,6 +12,7 @@ import { Button } from "@/components/ui/Button";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { CatalogCard } from "@/components/ui/CatalogCard";
+import { Gallery } from "@/components/ui/Gallery";
 import { Accordion } from "@/components/ui/Accordion";
 import { Simulator } from "@/components/Simulator";
 import { Hero } from "@/components/sections/Hero";
@@ -20,6 +21,7 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { faqJsonLd } from "@/lib/jsonld";
 import { faq } from "@/lib/content";
 import { catalog } from "@/lib/pricing";
+import { realisations } from "@/lib/realisations";
 import { site } from "@/lib/site";
 
 const steps = [
@@ -68,13 +70,13 @@ export default function HomePage() {
       <Hero />
 
       {/* Services */}
-      <section className="py-20">
+      <section className="py-16">
         <Container>
           <Reveal>
             <SectionHeading
               eyebrow="Nos prestations"
               title="Un seul prestataire pour tout nettoyer"
-              description="Du ménage régulier au traitement des nuisibles, en passant par les vitres, la remise en état ou le nettoyage de bureaux : nous couvrons tous vos besoins à Nîmes et alentours."
+              description="Ménage, remise en état, vitres, nuisibles, bureaux : tous vos besoins à Nîmes, avec un seul interlocuteur."
             />
           </Reveal>
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -94,8 +96,31 @@ export default function HomePage() {
         </Container>
       </section>
 
+      {/* Avant / Après */}
+      <section className="bg-slate-50 py-16">
+        <Container>
+          <Reveal>
+            <SectionHeading
+              eyebrow="Avant / Après"
+              title="Des résultats qui parlent"
+              description="Un aperçu de nos chantiers de nettoyage et de remise en état."
+            />
+          </Reveal>
+          <div className="mt-12">
+            <Gallery items={realisations.slice(0, 3)} />
+          </div>
+          <Reveal>
+            <div className="mt-10 text-center">
+              <Button href="/realisations" variant="outline" size="lg">
+                Voir toutes les réalisations <ArrowRight className="size-4" />
+              </Button>
+            </div>
+          </Reveal>
+        </Container>
+      </section>
+
       {/* Crédit d'impôt + simulateur */}
-      <section className="bg-slate-50 py-20">
+      <section className="py-16">
         <Container>
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <Reveal>
@@ -108,13 +133,12 @@ export default function HomePage() {
                     <span className="text-gradient">2 fois moins cher</span>
                   </>
                 }
-                description="Pour les prestations réalisées à votre domicile, vous bénéficiez d'un crédit d'impôt de 50 %. Une heure facturée 30 € ne vous coûte réellement que 15 €."
+                description="Pour le ménage à votre domicile : 30 €/h facturés, 15 €/h réellement à votre charge."
               />
               <ul className="mt-6 space-y-3">
                 {[
-                  "50 % de crédit d'impôt sur vos dépenses de ménage à domicile",
+                  "50 % de crédit d'impôt sur le ménage à domicile",
                   "Avance immédiate : ne payez tout de suite que la moitié",
-                  "Dispositif géré via la coopérative Accès SAP, déclarée SAP",
                   "Paiement en CESU accepté",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3">
@@ -139,7 +163,7 @@ export default function HomePage() {
       </section>
 
       {/* Comment ça marche */}
-      <section className="py-20">
+      <section className="bg-slate-50 py-16">
         <Container>
           <Reveal>
             <SectionHeading
@@ -168,7 +192,7 @@ export default function HomePage() {
       </section>
 
       {/* Zone d'intervention */}
-      <section className="bg-slate-50 py-20">
+      <section className="py-16">
         <Container>
           <div className="grid items-center gap-10 lg:grid-cols-[1fr_1.2fr]">
             <Reveal>
@@ -200,7 +224,7 @@ export default function HomePage() {
       </section>
 
       {/* Témoignages */}
-      <section className="py-20">
+      <section className="bg-slate-50 py-16">
         <Container>
           <Reveal>
             <SectionHeading
@@ -232,7 +256,7 @@ export default function HomePage() {
       </section>
 
       {/* FAQ aperçu */}
-      <section className="bg-slate-50 py-20">
+      <section className="py-16">
         <Container className="max-w-3xl">
           <Reveal>
             <SectionHeading
